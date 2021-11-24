@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ruby Cap Exercises</title>
-    </head>
-    <body></body>
+  <head>
+    <title>Ruby Cap Exercises</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  </head>
+  <body>
+    <article class="user-card">
+      <div class="user-card__top-container">
+        <div class="user-card__image-container">
+          <img src="https://reqres.in/img/faces/1-image.jpg" alt="George Bluth" class="user-card__image">
+        </div>
+        <a href="" class="user-card__details-link" aria-describedby="user-1">
+          <span class="material-icons-outlined user-card__icon" aria-hidden="true">info</span>
+          See details
+        </a>
+      </div>
+        <h2 id="user-1" class="user-card__name">George Bluth</h2>
+        <div class="user-card__id-container">
+          <span class="material-icons user-card__icon" aria-hidden='true'>
+            person
+          </span>
+          <span class="user-card__id">ID: 1</span>
+      </div>
+    </article>
+  </body>
 </html>
