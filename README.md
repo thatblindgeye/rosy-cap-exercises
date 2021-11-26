@@ -2,7 +2,7 @@
 
 ## Installation
 
-This app requires both Git and at least Node version 16.13 (LTS) installed.
+This app requires both Git and Node (version 16.13 (LTS) recommended) installed.
 
 1. Fork and clone this repository, replacing the `<USERNAME>` text below with your actual GitHub username:
 
