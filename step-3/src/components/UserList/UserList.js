@@ -5,6 +5,7 @@ import {ReactComponent as PersonIcon} from '../../assets/icons/person.svg'
 import './userList.css'
 
 function UserCard() {
+  
   return (
     <article className='user-card'>
       <div className='user-card__top-container'>
@@ -15,7 +16,7 @@ function UserCard() {
             className='user-card__image'
           />
         </div>
-        <Link to=':userID' className='user-card__details-link'
+        <Link to='1' className='user-card__details-link'
         aria-describedby='user-1'>
           <InfoIcon className='user-card__icon' aria-hidden='true' />
           See details
