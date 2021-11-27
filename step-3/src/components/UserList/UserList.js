@@ -47,7 +47,7 @@ export default function UserList() {
 
   if (fetchError) {
     return (
-      <ErrorMessage heading={fetchError} message='Unable to fetch users list. Please refresh the page to try again.' />
+      <ErrorMessage heading={fetchError} message='Unable to load list of users. Please refresh the page to try again.' />
     )
     // Reason for not having an 'isLoading' state: if the users state is an empty array, the component should be considered still loading
   } else if (!users.length) {
