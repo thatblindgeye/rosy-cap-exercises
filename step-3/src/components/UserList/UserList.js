@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
+import ErrorMessage from '../Error/ErrorMessage';
+import Loading from '../Loading/Loading';
 import {ReactComponent as InfoIcon} from '../../assets/icons/info.svg'
 import {ReactComponent as PersonIcon} from '../../assets/icons/person.svg'
 import './userList.css'
@@ -53,26 +55,25 @@ export default function UserList() {
       setIsLoading(false);
       setUsers(responseData.data);
     } catch (error) {
-      setFetchError('Unable to fetch user list. Please refresh the page to try again.');
+      setFetchError(error.message);
       console.error(error);
     }
   }
 
   useEffect(() => {
-    fetchUserList('https://reqres.in/api/users');
+    setTimeout(() => {
+      fetchUserList('https://reqres.in/api/users');
+
+    }, 5000)
   }, [])
 
   if (fetchError) {
     return (
-      <div className='error-container'>
-        <h1>{fetchError}</h1>
-      </div>
+      <ErrorMessage heading={fetchError} message='Unable to fetch users list. Please refresh the page to try again.' />
     )
   } else if (isLoading) {
     return (
-      <div className='loading-container'>
-        <div className='loading-icon' aria-label='Loading'></div>
-      </div>
+      <Loading />
     )
   } else {
     return (
@@ -80,7 +81,7 @@ export default function UserList() {
         <h1>Users</h1>
         <div className='users-container'>
           {users.map(user => {
-            return <UserCard user={user} />
+            return <UserCard key={user.id} user={user} />
           })}
         </div>
       </>
