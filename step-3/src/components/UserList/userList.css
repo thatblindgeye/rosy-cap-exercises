@@ -61,7 +61,7 @@
 }
 
 .user-card__details-link {
-  color: #3673c9;
+  color: rgb(54, 115, 201);
   display: flex;
   align-items: center;
   column-gap: 5px;
@@ -73,15 +73,16 @@
 }
 
 .user-card__details-link:focus {
-  outline: 1px dotted black;
+  outline: 1px dotted rgb(0, 0, 0);
 }
 
 .user-card__icon {
+  flex-shrink: 0;
   font-size: 1.75rem;
 }
 
 .user-card__details-link > .user-card__icon {
-  color: #2568c5;
+  color: rgb(37, 104, 197);
   transition: transform 200ms linear;
 }
 
@@ -90,13 +91,13 @@
 }
 
 .user-card__name {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 1.75rem;
   margin: 40px 0 30px;
 }
 
 .user-card__id-container {
-  border: 1px solid #d7d7d7;
+  border: 1px solid rgb(215, 215, 215);
   border-radius: 25% / 40%;
   display: flex;
   align-items: center;
@@ -105,10 +106,10 @@
 }
 
 .user-card__id-container > .user-card__icon {
-  color: #151515;
+  color: rgb(21, 21, 21);
 }
 
 .user-card__id {
-  color: #2a2a2a;
+  color: rgb(42, 42, 42);
   font-size: 1.125rem;
 }

@@ -1,43 +1,43 @@
 @font-face {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-        /* Super Modern Browsers */
-            url('./assets/fonts/outfit-regular.woff2') format('woff2'),
-        /* Modern Browsers */ url('./assets/fonts/outfit-regular.woff')
-            format('woff'),
-        /* Safari, Android, iOS */ url('./assets/fonts/outfit-regular.ttf')
-            format('truetype');
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    /* Super Modern Browsers */
+        url('./assets/fonts/outfit-regular.woff2') format('woff2'),
+    /* Modern Browsers */ url('./assets/fonts/outfit-regular.woff')
+        format('woff'),
+    /* Safari, Android, iOS */ url('./assets/fonts/outfit-regular.ttf')
+        format('truetype');
 }
 
 @font-face {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-        /* Super Modern Browsers */ url('./assets/fonts/outfit-bold.woff2')
-            format('woff2'),
-        /* Modern Browsers */ url('./assets/fonts/outfit-bold.woff')
-            format('woff'),
-        /* Safari, Android, iOS */ url('./assets/fonts/outfit-bold.ttf')
-            format('truetype');
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    /* Super Modern Browsers */ url('./assets/fonts/outfit-bold.woff2')
+        format('woff2'),
+    /* Modern Browsers */ url('./assets/fonts/outfit-bold.woff')
+        format('woff'),
+    /* Safari, Android, iOS */ url('./assets/fonts/outfit-bold.ttf')
+        format('truetype');
 }
 
 body {
-    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
 }
 
 main {
-    max-width: 1700px;
-    padding: 10px;
+  max-width: 1700px;
+  padding: 10px;
 }
 
 h1 {
-font-size: 2.125rem;
+  font-size: 2.125rem;
 }

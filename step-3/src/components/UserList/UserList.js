@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import ErrorMessage from '../Error/ErrorMessage';
 import Loading from '../Loading/Loading';
-import {ReactComponent as InfoIcon} from '../../assets/icons/info.svg'
-import {ReactComponent as PersonIcon} from '../../assets/icons/person.svg'
-import './userList.css'
+import {ReactComponent as InfoIcon} from '../../assets/icons/info.svg';
+import {ReactComponent as PersonIcon} from '../../assets/icons/person.svg';
+import fetchData from '../../scripts/fetchData';
+import './userList.css';
 
 function UserCard({user}) {
   const {avatar, first_name, last_name, id} = user;
@@ -36,42 +37,20 @@ function UserCard({user}) {
   )
 }
 
-
 export default function UserList() {
   const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState('');
 
-  const fetchUserList = async (url) => {
-    try {
-      const response = await fetch(url, {
-        mode: 'cors'
-      });
-      if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-      }
-
-      const responseData = await response.json();
-      setIsLoading(false);
-      setUsers(responseData.data);
-    } catch (error) {
-      setFetchError(error.message);
-      console.error(error);
-    }
-  }
-
   useEffect(() => {
-    setTimeout(() => {
-      fetchUserList('https://reqres.in/api/users');
-
-    }, 5000)
+    fetchData('https://reqres.in/api/users', setUsers, setFetchError);
   }, [])
 
   if (fetchError) {
     return (
       <ErrorMessage heading={fetchError} message='Unable to fetch users list. Please refresh the page to try again.' />
     )
-  } else if (isLoading) {
+    // Reason for not having an 'isLoading' state: if the users state is an empty array, the component should be considered still loading
+  } else if (!users.length) {
     return (
       <Loading />
     )
