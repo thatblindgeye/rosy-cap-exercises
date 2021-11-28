@@ -1,5 +1,5 @@
 .user-card {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-bg-card);
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
   0px 4px 5px 0px rgba(0, 0, 0, 0.14),
   0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -54,7 +54,7 @@
 }
 
 .user-card__details-link {
-  color: rgb(54, 115, 201);
+  color: var(--color-text-link);
   display: flex;
   align-items: center;
   column-gap: 5px;
@@ -66,7 +66,7 @@
 }
 
 .user-card__details-link:focus {
-  outline: 1px dotted rgb(0, 0, 0);
+  outline: 1px dotted var(--color-border-focus);
 }
 
 .user-card__icon {
@@ -75,7 +75,7 @@
 }
 
 .user-card__details-link > .user-card__icon {
-  color: rgb(37, 104, 197);
+  color: var(--color-icon-details);
   transition: transform 200ms linear;
 }
 
@@ -84,13 +84,13 @@
 }
 
 .user-card__name {
-  color: rgb(0, 0, 0);
+  color: var(--color-text-primary);
   font-size: 1.75rem;
   margin: 40px 0 30px;
 }
 
 .user-card__id-container {
-  border: 1px solid rgb(215, 215, 215);
+  border: 1px solid var(--color-border-id);
   border-radius: 25% / 40%;
   display: flex;
   align-items: center;
@@ -99,10 +99,10 @@
 }
 
 .user-card__id-container > .user-card__icon {
-  color: rgb(21, 21, 21);
+  color: var(--color-icon-id);
 }
 
 .user-card__id {
-  color: rgb(42, 42, 42);
+  color: var(--color-text-secondary);
   font-size: 1.125rem;
 }

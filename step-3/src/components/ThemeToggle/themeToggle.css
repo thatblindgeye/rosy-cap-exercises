@@ -4,17 +4,18 @@
 
 .theme-toggle__input {
   border-radius: 50%;
+  color: var(--color-icon-theme);
   padding: 10px;
   transition: background-color linear 150ms;
   width: max-content;
 }
 
 .theme-toggle__input:focus {
-  outline: 2px dotted black;
+  outline: 1px dotted var(--color-border-focus);
 }
 
 .theme-toggle__input:hover {
-  background-color: gray;
+  background-color: var(--color-bg-toggle);
   cursor: pointer;
 }
 

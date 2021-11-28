@@ -24,7 +24,36 @@
         format('truetype');
 }
 
+:root.light {
+  --color-bg-base: rgb(240, 240 240);
+  --color-bg-card: rgb(220, 220 220);
+  --color-bg-toggle: rgba(37, 104, 197, 0.25);
+  --color-border-id: rgb(215, 215, 215);
+  --color-border-focus: rgb(0, 0, 0);
+  --color-icon-details: rgb(37, 104, 197);
+  --color-icon-id: rgb(21, 21, 21);
+  --color-icon-theme: rgb(18, 18, 18);
+  --color-text-link: rgb(54, 115, 201);
+  --color-text-primary: rgb(18, 18, 18);
+  --color-text-secondary: rgb(42, 42, 42);
+}
+
+:root.dark {
+  --color-bg-base: rgb(18, 18, 18);
+  --color-bg-card: rgb(36, 36, 36);
+  --color-bg-toggle: rgba(50, 125, 230, 0.25);
+  --color-border-id: rgb(50, 50, 50);
+  --color-border-focus: rgb(255, 255, 255);
+  --color-icon-details: rgb(50, 125, 230);
+  --color-icon-id: rgb(245, 245, 245);
+  --color-icon-theme: rgb(240, 240, 240);
+  --color-text-link: rgb(85, 149, 238);
+  --color-text-primary: rgb(240, 240, 240);
+  --color-text-secondary: rgb(215, 215, 215);
+}
+
 body {
+  background-color: var(--color-bg-base);
   font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
 }
 
