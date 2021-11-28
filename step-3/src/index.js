@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import UserList from './components/UserList/UserList';
-import UserDetail from './components/UserDetail/UserDetail';
+import UserDetails from './components/UserDetails/UserDetails';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
         <Route path='/' element={<App />}>
           <Route index element={<UserList />} />
           <Route path="users" element={<UserList />} />
-          <Route path=':userID' element={<UserDetail />} />
+          <Route path=':userID' element={<UserDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

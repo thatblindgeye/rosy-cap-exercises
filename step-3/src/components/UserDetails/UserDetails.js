@@ -4,7 +4,7 @@ import ErrorMessage from '../Error/ErrorMessage';
 import Loading from '../Loading/Loading';
 import fetchData from '../../scripts/fetchData';
 
-export default function UserDetail() {
+export default function UserDetails() {
   const linkParams = useParams();
   const [user, setUser] = useState({});
   const [fetchError, setFetchError] = useState('');
@@ -27,7 +27,7 @@ export default function UserDetail() {
     )
   } else {
     const {avatar, first_name, last_name, email} = user;
-    
+
     return (
       <article className='details-card'>
         <h1>Details for {first_name}</h1>

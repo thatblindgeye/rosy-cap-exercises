@@ -3,9 +3,9 @@ import './error.css';
 
 export default function Error({heading, message}) {
   return (
-    <div className='error-container'>
-      <h1>{heading}</h1>
-      <p>{message}</p>
+    <div className='error-message__container'>
+      <h1 className='error-message__heading'>{heading}</h1>
+      <p className='error-message__message'>{message}</p>
     </div>
   )
 }
