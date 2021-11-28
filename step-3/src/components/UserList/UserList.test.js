@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from '../../App';
 import UserList from './UserList';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-test('renders "Users" heading', () => {
+test('renders UserList component', async () => {
   render(
     <BrowserRouter>
       <Routes>
@@ -13,6 +13,10 @@ test('renders "Users" heading', () => {
       </Routes>
     </BrowserRouter>
   );
-  const h1Element = screen.getByText(/Users/i);
-  expect(h1Element).toBeInTheDocument();
+  
+  await waitFor(() => {
+    screen.getByText(/users/i)
+  })
+
+  expect(screen.getByText(/users/i)).toBeInTheDocument();
 });
