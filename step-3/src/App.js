@@ -1,13 +1,19 @@
+import { Outlet } from 'react-router-dom';
 import './sanitize.css';
 import './App.css';
-import { Outlet } from 'react-router-dom';
+import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 
 function App() {
-    return (
-        <main aria-live='polite' aria-atomic='true'>
-            <Outlet />
-        </main>
-    );
+  return (
+    <>
+      <header>
+        <ThemeToggle />
+      </header>
+      <main aria-live='polite' aria-atomic='true'>
+        <Outlet />
+      </main>
+    </>
+  );
 }
 
 export default App;
