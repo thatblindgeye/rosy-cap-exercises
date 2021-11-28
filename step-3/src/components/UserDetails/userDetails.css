@@ -1,0 +1,41 @@
+.details-card h1 {
+  font-size: 1.5rem;
+}
+
+.details-card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: min(100%, 600px);
+}
+
+@media screen and (min-width: 300px) {
+  .details-card__container {
+    flex-direction: row;
+  }
+}
+
+.details-card__image-container {
+  height: 150px;
+  width: 100%;
+}
+
+@media screen and (min-width: 300px) {
+  .details-card__image-container {
+    width: 50%;
+  }
+}
+
+.details-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-card__info-container {
+  padding: 10px;
+}
+
+.details-card__name {
+  font-size: 1.25rem;
+}
