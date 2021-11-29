@@ -1,6 +1,9 @@
-.users-container {
+.user-list-container {
+  padding: 0 25px;
+}
+
+.user-cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  padding: 25px;
 }

@@ -24,14 +24,14 @@ export default function UserList() {
     )
   } else {
     return (
-      <>
+      <div className='user-list-container'>
         <h1>Users</h1>
-        <div className='users-container'>
+        <div className='user-cards-container'>
           {users.map(user => {
             return <UserCard key={user.id} user={user} />
           })}
         </div>
-      </>
+      </div>
     );
   }
 }

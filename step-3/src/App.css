@@ -25,7 +25,7 @@
 }
 
 :root.light {
-  --color-bg-base: rgb(240, 240 240);
+  --color-bg-base: rgb(240, 240, 240);
   --color-bg-card: rgb(220, 220 220);
   --color-bg-toggle: rgba(37, 104, 197, 0.25);
   --color-border-id: rgb(215, 215, 215);
@@ -33,7 +33,7 @@
   --color-icon-details: rgb(37, 104, 197);
   --color-icon-id: rgb(21, 21, 21);
   --color-icon-theme: rgb(18, 18, 18);
-  --color-text-link: rgb(54, 115, 201);
+  --color-text-link: rgb(46, 99, 173);
   --color-text-primary: rgb(18, 18, 18);
   --color-text-secondary: rgb(42, 42, 42);
 }
@@ -65,7 +65,7 @@ code {
 
 main {
   max-width: 1700px;
-  padding: 10px;
+  padding: 0 15px;
 }
 
 h1 {
