@@ -1,4 +1,4 @@
-export default async function fetchData(url, mainStateFunction, errorFunction) {
+export default async function fetchData(url, setStateFunction, setErrorFunction) {
   try {
     const response = await fetch(url, {
       mode: 'cors'
@@ -8,9 +8,9 @@ export default async function fetchData(url, mainStateFunction, errorFunction) {
     }
 
     const responseData = await response.json();
-    mainStateFunction(responseData.data);
+    setStateFunction(responseData.data);
   } catch (error) {
-    errorFunction(error.message);
+    setErrorFunction(error.message);
     console.error(error);
   }
 }

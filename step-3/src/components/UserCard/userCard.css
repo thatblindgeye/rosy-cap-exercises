@@ -84,7 +84,6 @@
 }
 
 .user-card__name {
-  color: var(--color-text-primary);
   font-size: 1.75rem;
   margin: 40px 0 30px;
 }
